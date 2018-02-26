@@ -4,16 +4,16 @@
   --color-secondary: #188fa7;
   --color-accent: #7dc7d6;
 
-  --font-primary:"Raleway", sans-serif;
+  --font-primary: "Raleway", sans-serif;
 
-  --font-secondary:"Lobster", cursive;
+  --font-secondary: "Lobster", cursive;
 }
 
 html {
   font-family: var(--font-primary);
 }
 
-h1, h2, h4, h5, blockquote, cite, strong, del,ins, b, u,s {
+h1, h2, h4, h5, blockquote, cite, strong, del, ins, b, u, s {
   color: var(--color-secondary);
 }
 
