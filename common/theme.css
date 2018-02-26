@@ -1,11 +1,12 @@
 :root {
---color-primary: #f18f01;
---color-primary-light: #fdc689;
---color-secondary: #188fa7;
---color-accent: #7dc7d6;
+  --color-primary: #f18f01;
+  --color-primary-light: #fdc689;
+  --color-secondary: #188fa7;
+  --color-accent: #7dc7d6;
 
---font-primary:'Raleway', sans-serif;
---font-secondary:'Lobster', cursive;
+  --font-primary:"Raleway", sans-serif;
+
+  --font-secondary:"Lobster", cursive;
 }
 
 html {
