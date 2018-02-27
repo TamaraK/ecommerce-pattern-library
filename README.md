@@ -1,6 +1,6 @@
 ---
 name: "Steamy"
-fontUrl: "https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet"
+fontUrl: "https://fonts.googleapis.com/css?family=Lobster|Raleway"
 fonts:
   primary: |
     The primary typeface is a slim sans serif that represents the simplicity most tea drinkers love, its soft but still stands out.  

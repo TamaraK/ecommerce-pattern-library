@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library
- * @version 1519653253089
+ * @version 1519657353941
  */
-const patternManifest_1519653253089 = {
+const patternManifest_1519657353941 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -461,16 +461,54 @@ const patternManifest_1519653253089 = {
           }
         ]
       },
-      "fonts": {},
+      "fonts": {
+        "primary": {
+          "name": "--font-primary",
+          "namePretty": "Raleway",
+          "raw": "\"Raleway\", sans-serif",
+          "weights": {
+            "normal": {
+              "weight": "normal",
+              "hasNormal": true,
+              "hasItalic": false
+            }
+          }
+        },
+        "secondary": {
+          "name": "--font-secondary",
+          "namePretty": "Lobster",
+          "raw": "\"Lobster\", cursive",
+          "weights": {
+            "normal": {
+              "weight": "normal",
+              "hasNormal": true,
+              "hasItalic": false
+            }
+          }
+        },
+        "accent": []
+      },
       "coloursRaw": {
         "--color-primary": "#f18f01",
         "--color-primary-light": "#fdc689",
         "--color-secondary": "#188fa7",
         "--color-accent": "#7dc7d6"
+      },
+      "fontsRaw": {
+        "--font-primary": "\"Raleway\", sans-serif",
+        "--font-secondary": "\"Lobster\", cursive"
       }
     },
     "readme": {
-      "attributes": {}
+      "attributes": {
+        "name": "Steamy",
+        "fontUrl": "https://fonts.googleapis.com/css?family=Lobster|Raleway",
+        "backgroundColour": "#fff",
+        "interfaceColours": {
+          "primary": 0,
+          "opposite": 255
+        }
+      }
     },
     "icons": [
       "special-badge",
@@ -497,16 +535,17 @@ const patternManifest_1519653253089 = {
       "icons": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/images/icons.svg"
     },
     "logos": {
-      "sizeLarge": false,
-      "size64": false,
-      "size32": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/images/logo-32.svg",
-      "size16": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/images/logo-16.svg",
-      "size16Local": "logo-16.svg",
-      "size32Local": "logo-32.svg"
+      "sizeLarge": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/images/logo.svg",
+      "size64": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/images/logo-64.svg",
+      "size32": false,
+      "size16": false,
+      "sizeLargeLocal": "logo.svg",
+      "size64Local": "logo-64.svg"
     },
     "patterns": [
       "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/buttons",
-      "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/cards"
+      "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/cards",
+      "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms"
     ],
     "pages": []
   },
@@ -550,14 +589,18 @@ const patternManifest_1519653253089 = {
           "namePretty": "Basic card",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/cards/basic-card.html",
           "localPath": "patterns/cards/basic-card.html",
-          "readme": {}
+          "readme": {
+            "width": 400
+          }
         },
         {
           "name": "special-card",
           "namePretty": "Special card",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/cards/special-card.html",
           "localPath": "patterns/cards/special-card.html",
-          "readme": {}
+          "readme": {
+            "width": 400
+          }
         }
       ],
       "md": [
@@ -574,6 +617,41 @@ const patternManifest_1519653253089 = {
           "namePretty": "Cards",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/cards/cards.css",
           "localPath": "patterns/cards/cards.css"
+        }
+      ]
+    },
+    {
+      "name": "forms",
+      "namePretty": "Forms",
+      "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms",
+      "html": [
+        {
+          "name": "email",
+          "namePretty": "Email",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/email.html",
+          "localPath": "patterns/forms/email.html"
+        },
+        {
+          "name": "name-information",
+          "namePretty": "Name information",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/name-information.html",
+          "localPath": "patterns/forms/name-information.html"
+        }
+      ],
+      "md": [
+        {
+          "name": "readme",
+          "namePretty": "Readme",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/README.md",
+          "localPath": "patterns/forms/README.md"
+        }
+      ],
+      "css": [
+        {
+          "name": "forms",
+          "namePretty": "Forms",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/forms.css",
+          "localPath": "patterns/forms/forms.css"
         }
       ]
     }
@@ -598,5 +676,5 @@ const patternManifest_1519653253089 = {
   }
 };
 
-patternBotIncludes(patternManifest_1519653253089);
+patternBotIncludes(patternManifest_1519657353941);
 }());
