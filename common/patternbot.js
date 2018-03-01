@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library
- * @version 1519657353941
+ * @version 1519829617312
  */
-const patternManifest_1519657353941 = {
+const patternManifest_1519829617312 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -636,6 +636,12 @@ const patternManifest_1519657353941 = {
           "namePretty": "Name information",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/name-information.html",
           "localPath": "patterns/forms/name-information.html"
+        },
+        {
+          "name": "province-state",
+          "namePretty": "Province state",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/province-state.html",
+          "localPath": "patterns/forms/province-state.html"
         }
       ],
       "md": [
@@ -676,5 +682,5 @@ const patternManifest_1519657353941 = {
   }
 };
 
-patternBotIncludes(patternManifest_1519657353941);
+patternBotIncludes(patternManifest_1519829617312);
 }());

@@ -893,11 +893,11 @@
                 </i>
               </button>
               <code><pre id="cards-basic-card-code-sample-copy-chunk">&lt;div class="card island-1-2"&gt;
-  &lt;h2 class="zetta push-1-4">This is a card&lt;/h2>
+  &lt;div class="embed embed-3by2">
+    &lt;img class="embed-item" src="images/card-img.jpg" alt="">
+  &lt;/div>
+  &lt;h2 class="zetta card-titles push-1-4">This is a card&lt;/h2>
   &lt;p class="push-0">This is the tea description&lt;/p>
-  &lt;i class="icon i-128 push-1-2">
-      &lt;svg/>
-    &lt;/i>
 &lt;/div>
 </pre></code>
             </div>
@@ -967,7 +967,7 @@
   &lt;i class="icon i-128 push-1-2">
       &lt;svg>&lt;use xlink:href="../../images/icons.svg#special-badge"/>&lt;/svg>
     &lt;/i>
-  &lt;h2 class="zetta push-1-4">This is a card&lt;/h2>
+  &lt;h2 class="zetta card-titles push-1-4">This is a card&lt;/h2>
   &lt;p class="push-0">This is the tea description&lt;/p>
 &lt;/div>
 </pre></code>
@@ -985,6 +985,7 @@
         <ol class="list-group-inline push-1-4 pad-b-1-4">
             <li><a href="#forms--email">Email</a></li>
             <li><a href="#forms--name-information">Name information</a></li>
+            <li><a href="#forms--province-state">Province state</a></li>
         </ol>
       </nav>
   </div>
@@ -1125,6 +1126,198 @@
     &lt;input id="name" type="text">
   &lt;/fieldset>
 &lt;/form>
+</pre></code>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="pattern-details " id="forms--province-state" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Province state</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="forms-province-state-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="forms/province-state" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/forms/province-state.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
+
+      <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
+        <div class="gutter-2 pad-t-1-2 pad-b-1-2">
+          <div class="resizeable-pattern relative" style="">
+            <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
+            <iframe data-src="patterns/forms/province-state.html" scrolling="no" onload="resizeIframe(this)"  ></iframe>
+              <div class="resizeable-pattern-length">
+                <div class="resize-handle resize-handle-left" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+                <div class="resize-handle resize-handle-right" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="forms-province-state-code-sample" tabindex="-1">
+            <div class="pattern-code relative milli island-1-2" style="">
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#forms-province-state-code-sample-copy-chunk" hidden>
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-copy"></use></svg>
+                </i>
+              </button>
+              <code><pre id="forms-province-state-code-sample-copy-chunk">&lt;div novalidate=""&gt;
+  &lt;label class="push-1-2" id="state">State or Province&lt;/label>
+  &lt;input id="state" list="state-list" required aria-describedby="state-province-error">
+  &lt;datalist id="state-list">
+    &lt;option value="Alberta">
+    &lt;/option>
+    &lt;option value="British Columbia">
+    &lt;/option>
+    &lt;option value="Manitoba">
+    &lt;/option>
+    &lt;option value="New Brunswick">
+    &lt;/option>
+    &lt;option value="Newfoundland">
+    &lt;/option>
+    &lt;option value="Nova Scotia">
+    &lt;/option>
+    &lt;option value="Ontario">
+    &lt;/option>
+    &lt;option value="Prince Edward Island">
+    &lt;/option>
+    &lt;option value="Quebec">
+    &lt;/option>
+    &lt;option value="Saskatchewan">
+    &lt;/option>
+    &lt;option value="Northwest Territories">
+    &lt;/option>
+    &lt;option value="Nunavut">
+    &lt;/option>
+    &lt;option value="Yukon">
+    &lt;/option>
+    &lt;option value="Alabama">
+    &lt;/option>
+    &lt;option value="Alaska">
+    &lt;/option>
+    &lt;option value="Arizona">
+    &lt;/option>
+    &lt;option value="Arkansas">
+    &lt;/option>
+    &lt;option value="California">
+    &lt;/option>
+    &lt;option value="Colorado">
+    &lt;/option>
+    &lt;option value="Connecticut">
+    &lt;/option>
+    &lt;option value="Delaware">
+    &lt;/option>
+    &lt;option value="Florida">
+    &lt;/option>
+    &lt;option value="Georgia">
+    &lt;/option>
+    &lt;option value="Hawaii">
+    &lt;/option>
+    &lt;option value="Idaho">
+    &lt;/option>
+    &lt;option value="Illinois">
+    &lt;/option>
+    &lt;option value="Indiana">
+    &lt;/option>
+    &lt;option value="Iowa">
+    &lt;/option>
+    &lt;option value="Kansas">
+    &lt;/option>
+    &lt;option value="Kentucky">
+    &lt;/option>
+    &lt;option value="Louisiana">
+    &lt;/option>
+    &lt;option value="Maine">
+    &lt;/option>
+    &lt;option value="Maryland">
+    &lt;/option>
+    &lt;option value="Massachusetts">
+    &lt;/option>
+    &lt;option value="Michigan">
+    &lt;/option>
+    &lt;option value="Minnesota">
+    &lt;/option>
+    &lt;option value="Mississippi">
+    &lt;/option>
+    &lt;option value="Missouri">
+    &lt;/option>
+    &lt;option value="Montana">
+    &lt;/option>
+    &lt;option value="Nebraska">
+    &lt;/option>
+    &lt;option value="Nevada">
+    &lt;/option>
+    &lt;option value="New Hampshire">
+    &lt;/option>
+    &lt;option value="New Jersey">
+    &lt;/option>
+    &lt;option value="New Mexico">
+    &lt;/option>
+    &lt;option value="New York">
+    &lt;/option>
+    &lt;option value="North Carolina">
+    &lt;/option>
+    &lt;option value="North Dakota">
+    &lt;/option>
+    &lt;option value="Ohio">
+    &lt;/option>
+    &lt;option value="Oklahoma">
+    &lt;/option>
+    &lt;option value="Oregon">
+    &lt;/option>
+    &lt;option value="Pennsylvania">
+    &lt;/option>
+    &lt;option value="Rhode Island">
+    &lt;/option>
+    &lt;option value="South Carolina">
+    &lt;/option>
+    &lt;option value="South Dakota">
+    &lt;/option>
+    &lt;option value="Tennessee">
+    &lt;/option>
+    &lt;option value="Texas">
+    &lt;/option>
+    &lt;option value="Utah">
+    &lt;/option>
+    &lt;option value="Vermont">
+    &lt;/option>
+    &lt;option value="Virginia">
+    &lt;/option>
+    &lt;option value="Washington">
+    &lt;/option>
+    &lt;option value="West Virginia">
+    &lt;/option>
+    &lt;option value="Wisconsin">
+    &lt;/option>
+    &lt;option value="Wyoming">
+    &lt;/option>
+  &lt;/datalist>
+&lt;/div>
 </pre></code>
             </div>
           </div>
