@@ -1,3 +1,7 @@
 .section-t {
   color: var(--color-primary);
 }
+
+legend {
+  color: var(--color-primary);
+}

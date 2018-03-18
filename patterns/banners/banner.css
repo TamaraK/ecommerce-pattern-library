@@ -1,14 +1,12 @@
-.card {
-  max-width: 24em;
-  border: 3px solid var(--color-accent);
+.banner-main {
+  text-align: center;
+  border-color: var(--color-accent);
   border-radius: 8px;
 
-}
-
-.card-special {
   background-color: var(--color-accent);
 }
 
-.card-titles {
+h1 {
   font-family: 'Lobster', cursive;
+  color: #fff;
 }

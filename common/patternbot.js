@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library
- * @version 1519829617312
+ * @version 1521412114021
  */
-const patternManifest_1519829617312 = {
+const patternManifest_1521412114021 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -543,6 +543,7 @@ const patternManifest_1519829617312 = {
       "size64Local": "logo-64.svg"
     },
     "patterns": [
+      "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/banners",
       "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/buttons",
       "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/cards",
       "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms"
@@ -550,6 +551,34 @@ const patternManifest_1519829617312 = {
     "pages": []
   },
   "userPatterns": [
+    {
+      "name": "banners",
+      "namePretty": "Banners",
+      "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/banners",
+      "html": [
+        {
+          "name": "banner",
+          "namePretty": "Banner",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/banners/banner.html",
+          "localPath": "patterns/banners/banner.html"
+        },
+        {
+          "name": "header-banner",
+          "namePretty": "Header banner",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/banners/header-banner.html",
+          "localPath": "patterns/banners/header-banner.html"
+        }
+      ],
+      "md": [],
+      "css": [
+        {
+          "name": "banner",
+          "namePretty": "Banner",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/banners/banner.css",
+          "localPath": "patterns/banners/banner.css"
+        }
+      ]
+    },
     {
       "name": "buttons",
       "namePretty": "Buttons",
@@ -626,6 +655,18 @@ const patternManifest_1519829617312 = {
       "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms",
       "html": [
         {
+          "name": "address",
+          "namePretty": "Address",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/address.html",
+          "localPath": "patterns/forms/address.html"
+        },
+        {
+          "name": "countires",
+          "namePretty": "Countires",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/countires.html",
+          "localPath": "patterns/forms/countires.html"
+        },
+        {
           "name": "email",
           "namePretty": "Email",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/email.html",
@@ -638,10 +679,28 @@ const patternManifest_1519829617312 = {
           "localPath": "patterns/forms/name-information.html"
         },
         {
-          "name": "province-state",
-          "namePretty": "Province state",
-          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/province-state.html",
-          "localPath": "patterns/forms/province-state.html"
+          "name": "password",
+          "namePretty": "Password",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/password.html",
+          "localPath": "patterns/forms/password.html"
+        },
+        {
+          "name": "postal-code",
+          "namePretty": "Postal code",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/postal-code.html",
+          "localPath": "patterns/forms/postal-code.html"
+        },
+        {
+          "name": "province",
+          "namePretty": "Province",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/province.html",
+          "localPath": "patterns/forms/province.html"
+        },
+        {
+          "name": "telephone",
+          "namePretty": "Telephone",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/telephone.html",
+          "localPath": "patterns/forms/telephone.html"
         }
       ],
       "md": [
@@ -682,5 +741,5 @@ const patternManifest_1519829617312 = {
   }
 };
 
-patternBotIncludes(patternManifest_1519829617312);
+patternBotIncludes(patternManifest_1521412114021);
 }());
