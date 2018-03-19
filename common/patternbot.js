@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library
- * @version 1521412114021
+ * @version 1521476408698
  */
-const patternManifest_1521412114021 = {
+const patternManifest_1521476408698 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -546,7 +546,11 @@ const patternManifest_1521412114021 = {
       "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/banners",
       "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/buttons",
       "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/cards",
-      "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms"
+      "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/footer",
+      "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms",
+      "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/header",
+      "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/sections",
+      "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/side-nav"
     ],
     "pages": []
   },
@@ -650,6 +654,21 @@ const patternManifest_1521412114021 = {
       ]
     },
     {
+      "name": "footer",
+      "namePretty": "Footer",
+      "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/footer",
+      "html": [
+        {
+          "name": "footer",
+          "namePretty": "Footer",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/footer/footer.html",
+          "localPath": "patterns/footer/footer.html"
+        }
+      ],
+      "md": [],
+      "css": []
+    },
+    {
       "name": "forms",
       "namePretty": "Forms",
       "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms",
@@ -719,6 +738,65 @@ const patternManifest_1521412114021 = {
           "localPath": "patterns/forms/forms.css"
         }
       ]
+    },
+    {
+      "name": "header",
+      "namePretty": "Header",
+      "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/header",
+      "html": [
+        {
+          "name": "header",
+          "namePretty": "Header",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/header/header.html",
+          "localPath": "patterns/header/header.html"
+        }
+      ],
+      "md": [],
+      "css": [
+        {
+          "name": "header",
+          "namePretty": "Header",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/header/header.css",
+          "localPath": "patterns/header/header.css"
+        }
+      ]
+    },
+    {
+      "name": "sections",
+      "namePretty": "Sections",
+      "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/sections",
+      "html": [
+        {
+          "name": "sections",
+          "namePretty": "Sections",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/sections/sections.html",
+          "localPath": "patterns/sections/sections.html"
+        }
+      ],
+      "md": [],
+      "css": []
+    },
+    {
+      "name": "side-nav",
+      "namePretty": "Side nav",
+      "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/side-nav",
+      "html": [
+        {
+          "name": "sidenav",
+          "namePretty": "Sidenav",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/side-nav/sidenav.html",
+          "localPath": "patterns/side-nav/sidenav.html"
+        }
+      ],
+      "md": [],
+      "css": [
+        {
+          "name": "sidenav",
+          "namePretty": "Sidenav",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/side-nav/sidenav.css",
+          "localPath": "patterns/side-nav/sidenav.css"
+        }
+      ]
     }
   ],
   "config": {
@@ -741,5 +819,5 @@ const patternManifest_1521412114021 = {
   }
 };
 
-patternBotIncludes(patternManifest_1521412114021);
+patternBotIncludes(patternManifest_1521476408698);
 }());

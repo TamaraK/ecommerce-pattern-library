@@ -12,3 +12,16 @@
 .card-titles {
   font-family: 'Lobster', cursive;
 }
+
+.card-titles-section {
+  font-family: 'Lobster', cursive;
+  color: #fff;
+}
+
+.card-section {
+  max-width: 24em;
+  border: 3px solid var(--color-primary);
+  border-radius: 8px;
+  background-color: var(--color-primary-light);
+  color: #fff;
+}
