@@ -8,6 +8,7 @@
     background-color: var(--color-primary);
     overflow-x: hidden;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .sidenav a {
@@ -19,6 +20,20 @@
 
 .sidenav a:hover {
     color: var(--color-primary-light);
+}
+
+hr {
+  opacity: 0.2;
+  height: 2px;
+  width: 100px;
+  margin: 20px 30px;
+  background: #FFF;
+  border: none;
+  display: block;
+}
+
+.sub-navigation {
+
 }
 
 .main {
