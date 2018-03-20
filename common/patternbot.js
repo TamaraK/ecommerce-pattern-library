@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library
- * @version 1521558417017
+ * @version 1521561129579
  */
-const patternManifest_1521558417017 = {
+const patternManifest_1521561129578 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -546,9 +546,7 @@ const patternManifest_1521558417017 = {
       "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/banners",
       "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/buttons",
       "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/cards",
-      "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/footer",
       "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms",
-      "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/header",
       "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/sections",
       "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/side-nav"
     ],
@@ -654,21 +652,6 @@ const patternManifest_1521558417017 = {
       ]
     },
     {
-      "name": "footer",
-      "namePretty": "Footer",
-      "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/footer",
-      "html": [
-        {
-          "name": "footer",
-          "namePretty": "Footer",
-          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/footer/footer.html",
-          "localPath": "patterns/footer/footer.html"
-        }
-      ],
-      "md": [],
-      "css": []
-    },
-    {
       "name": "forms",
       "namePretty": "Forms",
       "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms",
@@ -740,28 +723,6 @@ const patternManifest_1521558417017 = {
       ]
     },
     {
-      "name": "header",
-      "namePretty": "Header",
-      "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/header",
-      "html": [
-        {
-          "name": "header",
-          "namePretty": "Header",
-          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/header/header.html",
-          "localPath": "patterns/header/header.html"
-        }
-      ],
-      "md": [],
-      "css": [
-        {
-          "name": "header",
-          "namePretty": "Header",
-          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/header/header.css",
-          "localPath": "patterns/header/header.css"
-        }
-      ]
-    },
-    {
       "name": "sections",
       "namePretty": "Sections",
       "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/sections",
@@ -819,5 +780,5 @@ const patternManifest_1521558417017 = {
   }
 };
 
-patternBotIncludes(patternManifest_1521558417017);
+patternBotIncludes(patternManifest_1521561129578);
 }());
