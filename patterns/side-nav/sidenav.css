@@ -1,6 +1,6 @@
 .sidenav {
     height: 100%;
-    width: 160px;
+    width: 300px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -9,6 +9,7 @@
     overflow-x: hidden;
     padding-top: 20px;
     padding-bottom: 20px;
+    text-align: center;
 }
 
 .sidenav a {
@@ -25,7 +26,7 @@
 hr {
   opacity: 0.2;
   height: 2px;
-  width: 100px;
+  width: 240px;
   margin: 20px 30px;
   background: #FFF;
   border: none;
@@ -33,10 +34,10 @@ hr {
 }
 
 .sub-navigation {
-
+ text-align: center;
 }
 
 .main {
-    margin-left: 160px;
+    margin-left: 300px;
     padding: 0px 10px;
 }

@@ -101,7 +101,6 @@ const patternBotIncludes = function (manifest) {
     for (i = 0; i < t; i++) {
       if (rootMatcher.test(allScripts[i].src)) {
         return allScripts[i].src.split(rootMatcher)[0];
-        break;
       }
     }
   };
@@ -143,7 +142,7 @@ const patternBotIncludes = function (manifest) {
     let patternInfoJson;
     const data = patternElem.innerText.trim();
 
-    if (!data) return {}
+    if (!data) return {};
 
     try {
       patternInfoJson = JSON.parse(data);
@@ -172,9 +171,50 @@ const patternBotIncludes = function (manifest) {
     };
   };
 
+  const correctHrefPaths = function (html) {
+    const hrefSearch = /href\s*=\s*"\.\.\/\.\.\//g;
+    const srcSearch = /src\s*=\s*"\.\.\/\.\.\//g;
+    const urlSearch = /url\((["']*)\.\.\/\.\.\//g;
+
+    return html
+      .replace(hrefSearch, 'href="../')
+      .replace(srcSearch, 'src="../')
+      .replace(urlSearch, 'url($1../')
+    ;
+  };
+
+  const buildAccurateSelectorFromElem = function (elem) {
+    let theSelector = elem.tagName.toLowerCase();
+
+    if (elem.id) theSelector += `#${elem.id}`;
+    if (elem.getAttribute('role')) theSelector += `[role="${elem.getAttribute('role')}"]`;
+    if (elem.classList.length > 0) theSelector += `.${[].join.call(elem.classList, '.')}`;
+
+    theSelector += ':first-of-type';
+
+    return theSelector;
+  };
+
+  /**
+   * This is an ugly mess: Blink does not properly render SVGs when using DOMParser alone.
+   * But, I need DOMParser to determine the correct element to extract.
+   *
+   * I only want to get the first element within the `<body>` tag of the loaded document.
+   * This dumps the whole, messy, HTML document into a temporary `<div>`,
+   * then uses the DOMParser version, of the same element, to create an accurate selector,
+   * then finds that single element in the temporary `<div>` using the selector and returns it.
+   */
   const htmlStringToElem = function (html) {
+    let theSelector = '';
+    const tmpDoc = document.createElement('div');
+    const finalTmpDoc = document.createElement('div');
     const doc = (new DOMParser()).parseFromString(html, 'text/html');
-    return doc.body;
+
+    tmpDoc.innerHTML = html;
+    theSelector = buildAccurateSelectorFromElem(doc.body.firstElementChild);
+    finalTmpDoc.appendChild(tmpDoc.querySelector(theSelector));
+
+    return finalTmpDoc;
   };
 
   const replaceElementValue = function (elem, sel, data) {
@@ -197,7 +237,7 @@ const patternBotIncludes = function (manifest) {
 
     if (!patternDetails.html) return;
 
-    patternOutElem = htmlStringToElem(patternDetails.html);
+    patternOutElem = htmlStringToElem(correctHrefPaths(patternDetails.html));
     patternData = getPatternInfo(patternElem);
 
     Object.keys(patternData).forEach((sel) => {
@@ -234,7 +274,7 @@ const patternBotIncludes = function (manifest) {
   };
 
   const hideLoadingScreen = function () {
-    const allDownloadedInterval = setInterval(() => {
+    let allDownloadedInterval = setInterval(() => {
       if (Object.values(downloadedAssets).includes(false)) return;
 
       clearInterval(allDownloadedInterval);
@@ -272,7 +312,7 @@ const patternBotIncludes = function (manifest) {
           if (resp.status >= 200 && resp.status <= 299) {
             return resp.text();
           } else {
-            console.group('Cannot location pattern');
+            console.group('Cannot locate pattern');
             console.log(resp.url);
             console.log(`Error ${resp.status}: ${resp.statusText}`);
             console.groupEnd();
@@ -348,9 +388,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library
- * @version 1521561129579
+ * @version 1521849220486
  */
-const patternManifest_1521561129578 = {
+const patternManifest_1521849220486 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -508,7 +548,9 @@ const patternManifest_1521561129578 = {
           "primary": 0,
           "opposite": 255
         }
-      }
+      },
+      "bodyRaw": "Steamy is a loose leaf tea seller specializing in aromatic fruity teas and designer accessories to make your tea drinking experience the best part of your day\n",
+      "bodyBasic": "Steamy is a loose leaf tea seller specializing in aromatic fruity teas and designer accessories to make your tea drinking experience the best part of your day"
     },
     "icons": [
       "special-badge",
@@ -550,7 +592,13 @@ const patternManifest_1521561129578 = {
       "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/sections",
       "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/side-nav"
     ],
-    "pages": []
+    "pages": [
+      {
+        "name": "home.html",
+        "namePretty": "Home",
+        "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/pages/home.html"
+      }
+    ]
   },
   "userPatterns": [
     {
@@ -561,12 +609,14 @@ const patternManifest_1521561129578 = {
         {
           "name": "banner",
           "namePretty": "Banner",
+          "filename": "banner",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/banners/banner.html",
           "localPath": "patterns/banners/banner.html"
         },
         {
           "name": "header-banner",
           "namePretty": "Header banner",
+          "filename": "header-banner",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/banners/header-banner.html",
           "localPath": "patterns/banners/header-banner.html"
         }
@@ -576,6 +626,7 @@ const patternManifest_1521561129578 = {
         {
           "name": "banner",
           "namePretty": "Banner",
+          "filename": "banner",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/banners/banner.css",
           "localPath": "patterns/banners/banner.css"
         }
@@ -589,6 +640,7 @@ const patternManifest_1521561129578 = {
         {
           "name": "buttons",
           "namePretty": "Buttons",
+          "filename": "buttons",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/buttons/buttons.html",
           "localPath": "patterns/buttons/buttons.html"
         }
@@ -597,6 +649,7 @@ const patternManifest_1521561129578 = {
         {
           "name": "readme",
           "namePretty": "Readme",
+          "filename": "README",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/buttons/README.md",
           "localPath": "patterns/buttons/README.md"
         }
@@ -605,6 +658,7 @@ const patternManifest_1521561129578 = {
         {
           "name": "buttons",
           "namePretty": "Buttons",
+          "filename": "buttons",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/buttons/buttons.css",
           "localPath": "patterns/buttons/buttons.css"
         }
@@ -618,17 +672,9 @@ const patternManifest_1521561129578 = {
         {
           "name": "basic-card",
           "namePretty": "Basic card",
+          "filename": "basic-card",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/cards/basic-card.html",
           "localPath": "patterns/cards/basic-card.html",
-          "readme": {
-            "width": 400
-          }
-        },
-        {
-          "name": "special-card",
-          "namePretty": "Special card",
-          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/cards/special-card.html",
-          "localPath": "patterns/cards/special-card.html",
           "readme": {
             "width": 400
           }
@@ -638,6 +684,7 @@ const patternManifest_1521561129578 = {
         {
           "name": "readme",
           "namePretty": "Readme",
+          "filename": "README",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/cards/README.md",
           "localPath": "patterns/cards/README.md"
         }
@@ -646,6 +693,7 @@ const patternManifest_1521561129578 = {
         {
           "name": "cards",
           "namePretty": "Cards",
+          "filename": "cards",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/cards/cards.css",
           "localPath": "patterns/cards/cards.css"
         }
@@ -659,48 +707,56 @@ const patternManifest_1521561129578 = {
         {
           "name": "address",
           "namePretty": "Address",
+          "filename": "address",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/address.html",
           "localPath": "patterns/forms/address.html"
         },
         {
           "name": "countires",
           "namePretty": "Countires",
+          "filename": "countires",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/countires.html",
           "localPath": "patterns/forms/countires.html"
         },
         {
           "name": "email",
           "namePretty": "Email",
+          "filename": "email",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/email.html",
           "localPath": "patterns/forms/email.html"
         },
         {
           "name": "name-information",
           "namePretty": "Name information",
+          "filename": "name-information",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/name-information.html",
           "localPath": "patterns/forms/name-information.html"
         },
         {
           "name": "password",
           "namePretty": "Password",
+          "filename": "password",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/password.html",
           "localPath": "patterns/forms/password.html"
         },
         {
           "name": "postal-code",
           "namePretty": "Postal code",
+          "filename": "postal-code",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/postal-code.html",
           "localPath": "patterns/forms/postal-code.html"
         },
         {
           "name": "province",
           "namePretty": "Province",
+          "filename": "province",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/province.html",
           "localPath": "patterns/forms/province.html"
         },
         {
           "name": "telephone",
           "namePretty": "Telephone",
+          "filename": "telephone",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/telephone.html",
           "localPath": "patterns/forms/telephone.html"
         }
@@ -709,6 +765,7 @@ const patternManifest_1521561129578 = {
         {
           "name": "readme",
           "namePretty": "Readme",
+          "filename": "README",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/README.md",
           "localPath": "patterns/forms/README.md"
         }
@@ -717,6 +774,7 @@ const patternManifest_1521561129578 = {
         {
           "name": "forms",
           "namePretty": "Forms",
+          "filename": "forms",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/forms/forms.css",
           "localPath": "patterns/forms/forms.css"
         }
@@ -730,6 +788,7 @@ const patternManifest_1521561129578 = {
         {
           "name": "sections",
           "namePretty": "Sections",
+          "filename": "sections",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/sections/sections.html",
           "localPath": "patterns/sections/sections.html"
         }
@@ -745,6 +804,7 @@ const patternManifest_1521561129578 = {
         {
           "name": "sidenav",
           "namePretty": "Sidenav",
+          "filename": "sidenav",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/side-nav/sidenav.html",
           "localPath": "patterns/side-nav/sidenav.html"
         }
@@ -754,6 +814,7 @@ const patternManifest_1521561129578 = {
         {
           "name": "sidenav",
           "namePretty": "Sidenav",
+          "filename": "sidenav",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/side-nav/sidenav.css",
           "localPath": "patterns/side-nav/sidenav.css"
         }
@@ -780,5 +841,5 @@ const patternManifest_1521561129578 = {
   }
 };
 
-patternBotIncludes(patternManifest_1521561129578);
+patternBotIncludes(patternManifest_1521849220486);
 }());
