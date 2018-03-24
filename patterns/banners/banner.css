@@ -2,8 +2,8 @@
   text-align: center;
   border-color: var(--color-accent);
   border-radius: 8px;
-  
-  background-color: var(--color-accent);
+  background-image: url("../images/banner.jpg");
+  background-size: 100%;
 }
 
 h1 {
