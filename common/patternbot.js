@@ -388,9 +388,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library
- * @version 1521850848037
+ * @version 1523125888211
  */
-const patternManifest_1521850848037 = {
+const patternManifest_1523125888211 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -597,6 +597,11 @@ const patternManifest_1521850848037 = {
         "name": "home.html",
         "namePretty": "Home",
         "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/pages/home.html"
+      },
+      {
+        "name": "products.html",
+        "namePretty": "Products",
+        "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/pages/products.html"
       }
     ]
   },
@@ -619,6 +624,13 @@ const patternManifest_1521850848037 = {
           "filename": "header-banner",
           "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/banners/header-banner.html",
           "localPath": "patterns/banners/header-banner.html"
+        },
+        {
+          "name": "image-banner",
+          "namePretty": "Image banner",
+          "filename": "image-banner",
+          "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/banners/image-banner.html",
+          "localPath": "patterns/banners/image-banner.html"
         }
       ],
       "md": [],
@@ -841,5 +853,5 @@ const patternManifest_1521850848037 = {
   }
 };
 
-patternBotIncludes(patternManifest_1521850848037);
+patternBotIncludes(patternManifest_1523125888211);
 }());

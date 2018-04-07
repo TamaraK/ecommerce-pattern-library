@@ -2,44 +2,49 @@
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>Special card</title>
+  <title>Home Page</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
   <script src="../common/patternbot.js"></script>
 </head>
 <body>
 
+  <main class="push-1-2 pad-t-1-2 pad-b-1-2" role="main" id="main">
+
   <script type="application/json" data-pattern="side-nav/sidenav"></script>
 
-  <script type="application/json" data-pattern="banners/banner"></script>
+    <script type="application/json" data-pattern="banners/image-banner"></script>
 
-  <main class="push-1-2 pad-t-1-2 pad-b-1-2" role="main" id="main">
+  <h3>Weekly Features</h3><hr>
+
     <div class="grid wrapper">
       <div class="unit xs-1 s-1 m-1-2 l-1-4 island-1-2">
-        <script type="application/json" data-pattern="cards/basic-card"></script>
-      </div>
-      <div class="unit xs-1 s-1 m-1-2 l-1-4 island-1-2">
-        <script type="application/json" data-pattern="cards/basic-card"></script>
-      </div>
-      <div class="unit xs-1 s-1 m-1-2 l-1-4 island-1-2">
-        <script type="application/json" data-pattern="cards/basic-card"></script>
-      </div>
-      <div class="unit xs-1 s-1 m-1-2 l-1-4 island-1-2">
-        <script type="application/json" data-pattern="cards/basic-card"></script>
-      </div>
-      <div class="unit xs-1 s-1 m-1-2 l-1-4 island-1-2">
-        <script type="application/json" data-pattern="cards/basic-card"></script>
-      </div>
-      <div class="unit xs-1 s-1 m-1-2 l-1-4 island-1-2">
-        <script type="application/json" data-pattern="cards/basic-card"></script>
-      </div>
-      <div class="unit xs-1 s-1 m-1-2 l-1-4 island-1-2">
-        <script type="application/json" data-pattern="cards/basic-card"></script>
-      </div>
-      <div class="unit xs-1 s-1 m-1-2 l-1-4 island-1-2">
-        <script type="application/json" data-pattern="cards/basic-card"></script>
+        <script type="application/json" data-pattern="cards/basic-card">
+          {
+            "h2": "The Cup",
+            "h4": "Accessory"
+          }
+        </script>
       </div>
 
+      <div class="unit xs-1 s-1 m-1-2 l-1-4 island-1-2">
+        <script type="application/json" data-pattern="cards/basic-card">
+         {
+           "h2": "City Cruises",
+           "h4": "Black Tea"
+         }
+        </script>
+      </div>
+
+      <div class="unit xs-1 s-1 m-1-2 l-1-4 island-1-2">
+        <script type="application/json" data-pattern="cards/basic-card">
+          {
+            "h2": "Bananas",
+            "h4": "Fruity Herbal"
+          }
+        </script>
+      </div>
+    </main>
 
 </body>
 </html>

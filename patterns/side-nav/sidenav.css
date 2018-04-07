@@ -10,6 +10,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
+    margin-right: 300px;
 }
 
 .sidenav a {
@@ -27,7 +28,7 @@ hr {
   opacity: 0.2;
   height: 2px;
   width: 240px;
-  margin: 20px 30px;
+  margin: 30px 30px;
   background: #FFF;
   border: none;
   display: block;
@@ -40,4 +41,13 @@ hr {
 .main {
     margin-left: 300px;
     padding: 0px 10px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+@media query {
+
 }
