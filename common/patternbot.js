@@ -388,9 +388,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library
- * @version 1523125888211
+ * @version 1524509395571
  */
-const patternManifest_1523125888211 = {
+const patternManifest_1524509395571 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -593,6 +593,11 @@ const patternManifest_1523125888211 = {
       "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/patterns/side-nav"
     ],
     "pages": [
+      {
+        "name": "checkout.html",
+        "namePretty": "Checkout",
+        "path": "/Users/tamarakazaniwsky/Documents/GitHub/ecommerce-pattern-library/pages/checkout.html"
+      },
       {
         "name": "home.html",
         "namePretty": "Home",
@@ -853,5 +858,5 @@ const patternManifest_1523125888211 = {
   }
 };
 
-patternBotIncludes(patternManifest_1523125888211);
+patternBotIncludes(patternManifest_1524509395571);
 }());

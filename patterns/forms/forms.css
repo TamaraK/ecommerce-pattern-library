@@ -5,3 +5,7 @@
 legend {
   color: var(--color-primary);
 }
+
+.wrapper {
+  margin-left: 350px;
+}

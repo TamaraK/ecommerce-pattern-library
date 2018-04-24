@@ -31,7 +31,6 @@ h4 {
   color: var(--color-accent);
 }
 
-
 ul, li, ol, dl, dt, dd {
   color: var(--color-primary);
 }
@@ -41,5 +40,5 @@ mark {
 }
 
 hr {
-  color: var(--color-secondary)
+  color: var(--color-secondary);
 }
